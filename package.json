@@ -14,7 +14,6 @@
     "url": "https://github.com/basisjs/basisjs-tools-config.git"
   },
   "main": "./lib/index.js",
-  "preferGlobal": true,
   "engines": {
     "node": ">=0.8.0"
   },
