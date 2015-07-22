@@ -1,0 +1,36 @@
+{
+  "name": "basisjs-tools-config",
+  "title": "Basis.js developer tools",
+  "version": "1.4.0",
+  "homepage": "https://github.com/basisjs/basisjs-tools",
+  "description": "Developer tools for basis.js framework",
+  "author": "Roman Dvornov <rdvornov@gmail.com>",
+  "license": "MIT",
+  "contributors": [
+    "Roman Dvornov <rdvornov@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/basisjs/basisjs-tools-config.git"
+  },
+  "main": "./lib/index.js",
+  "preferGlobal": true,
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "dependencies": {
+    "clap": "1.0.5",
+    "osenv": "0.1.3",
+    "mkdirp": "0.5.1",
+    "exit": "~0.1.2"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+  },
+  "files": [
+    "lib",
+    "LICENSE",
+    "README.md"
+  ]
+}
