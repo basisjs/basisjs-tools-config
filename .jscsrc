@@ -32,7 +32,7 @@
 
     "requireOperatorBeforeLineBreak": ["/", "*", "&&", "||", "&", "|", "=", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
 
-    "disallowImplicitTypeConversion": ["string", "binary"],
+    "disallowImplicitTypeConversion": ["string"],
 
     "disallowMultipleLineStrings": true,
     "validateQuoteMarks": "'",
