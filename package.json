@@ -1,6 +1,6 @@
 {
   "name": "basisjs-tools-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fetch config for basis.js tools",
   "author": "Roman Dvornov <rdvornov@gmail.com>",
   "homepage": "https://github.com/basisjs/basisjs-tools-config",
