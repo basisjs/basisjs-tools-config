@@ -7,8 +7,8 @@ Adds `basis.config` support for [basisjs-tools](https://github.com/basisjs/basis
 Module provide single function that extends `clap` command with `basis.config` support.
 
 ```js
-var configSupport = require('basisjs-tools-config');
 var clap = require('clap');
+var configSupport = require('basisjs-tools-config');
 
 var command = clap.create('example');
 
@@ -44,6 +44,10 @@ If config file doesn't found or could be parsed error outputs in console and exi
 
 Extended command tries to find and use `basis.config` file by default. It attempts to find `basis.config` at the current working directory. If it's not found, then it moves to the parent directory, and so on, until the file system root is reached.
 
+Besides `basis.config` module also check for `package.json`. Config may be stored with `basisjsConfig` key. If no `basisjsConfig` found then `package.json` ignores and searching is continue.
+
+`basis.config` has higher priority
+
 ### basis.config
 
 If `basis.config` found, it's content parses as `json`. Usualy properties treats as corresponding command options, and could be overridden by options in command line.
@@ -68,7 +72,25 @@ Example of `basis.config` at `/path/to/config`:
 }
 ```
 
-In this case doesn't matter at what directory you run `basis build` command, for example. File `/path/to/config/app.html` will be used for built and result will be put at `/path/to/config/output` directory. But you still able to override settings in config but using option with command, for example, if you run `basis build -o temp` at `/path/to/config/foo/bar` than result will be put at `/path/to/config/foo/bar/temp`.
+Config also can be stored in `package.json`:
+
+```json
+{
+  "basisjsConfig": {
+    "build": {
+      "file": "app.html",
+      "output": "build"
+    },
+    "server": {
+      "port": 8123
+    }
+  }
+}
+```
+
+> `basis.config` has higher priority. Config in `package.json` ignores if `basis.config` file exists.
+
+In both cases doesn't matter at what directory you run `basis build` command, for example. File `/path/to/config/app.html` will be used for built and result will be put at `/path/to/config/output` directory. But you still able to override settings in config but using option with command, for example, if you run `basis build -o temp` at `/path/to/config/foo/bar` than result will be put at `/path/to/config/foo/bar/temp`.
 
 ### Relative path resolving
 
