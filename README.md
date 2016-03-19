@@ -46,8 +46,6 @@ Extended command tries to find and use `basis.config` file by default. It attemp
 
 Besides `basis.config` module also check for `package.json`. Config may be stored with `basisjsConfig` key. If no `basisjsConfig` found then `package.json` ignores and searching is continue.
 
-`basis.config` has higher priority
-
 ### basis.config
 
 If `basis.config` found, it's content parses as `json`. Usualy properties treats as corresponding command options, and could be overridden by options in command line.
